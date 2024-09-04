@@ -1,0 +1,14 @@
+{% extends 'base_video.html' %}
+{% block title %}My Dashboard{% endblock %}
+{% block content %}
+    <h1><b>Welcome</b> <h3> {{ user[1] }}</h3></h1>
+    <hr>
+<!-- "Create or Join Meeting" button -->
+    <div class="create-meeting-button">
+        <div class="button-container">
+            <a class="btn btn-primary" href="{{ url_for('meeting_videomeet') }}">Create Meeting</a>
+            <a class="btn btn-primary" href="{{ url_for('join_videomeet') }}">Join Meeting</a>
+            <a class="btn btn-outline-light" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base_quiz.html' %}
+
+{% block content %}
+    <h2>Quiz</h2>
+    <form action="{{ url_for('show_quiz', room_id=room_id, user_id=user_id) }}" method="post">
+        {% for question in questions %}
+            <fieldset>
+                <legend>{{ question[2] }}</legend> <!-- Question text -->
+                {% set question_options = options_by_question[question[0]] if options_by_question.get(question[0]) else [] %}
+                {% for option in question_options %}
+                    <label>
+                        <input type="radio" name="{{ question[0] }}" value="{{ option[0] }}">
+                        {{ option[2] }} <!-- Option text -->
+                    </label><br>
+                {% endfor %}
+            </fieldset>
+        {% endfor %}
+        <input type="hidden" name="room_id" value="{{ room_id }}"> <!-- Hidden input to pass room_id -->
+        <input type="hidden" name="user_id" value="{{ user_id }}"> <!-- Hidden input to pass user_id -->
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

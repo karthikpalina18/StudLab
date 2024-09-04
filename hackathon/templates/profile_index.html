@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+<body>
+    <h1>All Posts</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post['username'] }}</h2>
+                <p>{{ post['content'] }}</p>
+                {% if post['image'] %}
+                    <img src="data:image/jpeg;base64,{{ post['image'] }}" alt="Post Image" style="width: 100px; height: auto;">
+                {% endif %}
+                <a href="{{ url_for('show_post', id=post['id']) }}">View</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_post') }}">Create New Post</a>
+</body>
+</html>

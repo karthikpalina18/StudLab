@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PDF</title>
+    <style>
+        body{
+            background-color: teal;
+        }
+        
+        .files{
+            background-color:#424242;
+            color:whitesmoke;
+        }
+        .s{
+            color:whitesmoke;
+        }
+        .s:hover{
+            color:teal;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="files">
+    <h1>Available Files <h4>click on the file to download</h4></h1>
+    <div class="serial">
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('download_file', file_id=file[0]) }}" class="s">{{ file[1] }}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+    </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain</title>
+    <style>
+        body {
+            background-color: #48CFCB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .message {
+
+            width: 400px;
+            background-color: #424242;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            align-items: center;
+        }
+        .button {
+            height:30px;
+            width:100px;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px; 
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            color: #424242;
+            background-color: #229799;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:active {
+            background-color: #229799;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="message">
+            <h2>Select Domain</h2>
+            <div class="content">
+                <a href="/guidance_videos" class="button">Web Development</a>
+                <a href="#" class="button">Artificial Intelligence</a>
+                <a href="#" class="button">Data Science</a>
+                <a href="#" class="button">Machine Learning</a>
+                <a href="#" class="button">Data Structures</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

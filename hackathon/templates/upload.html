@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <style>
+        body{
+            background-color: teal;
+            
+        }
+        .container{
+            padding:40px;
+            margin-top:15%;
+            margin-left:30%;
+            background-color: #424242;
+            text-align:center;
+            width:30%;
+        }
+        .button{
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            background-color: #81f30e;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Upload PDF File</h1>
+    <form action="{{ url_for('sem1upload') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf" required>
+        <button type="submit" class="button">Upload</button>
+    </form>
+    <h2>Files</h2>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('download_file', file_id=file[0]) }}">{{ file[1] }}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.body{
+  border:0px;
+  border-color:#f5f5f5;
+}
+
+
+.content {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttons {
+    background:#f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .join {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .create-btn {
+
+    width: 50%;
+  }
+  
+  .message-box {
+    margin:100px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+  }
+  
+  .messages {
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+  }
+  
+  .inputs {
+    margin:10%;
+    background-color: #229799;
+    border-radius: 5px;
+    height:5%;
+    width:50%;
+    padding: 10px;
+    display: flex;
+  }
+  .inputs input{
+    border-radius: 5px;
+    border:none;
+  }
+
+  .button{
+    height:35px;
+    width:70px;
+    border-radius: 10px;
+    border: none;
+    background-color:#424242;
+    color:#fff;
+    font-weight:600;
+  }
+  .button:active{
+    opacity:0.5;
+    
+  }
+
+
+  h2 {
+    text-align: center;
+    background-color: #229799;
+  }
+  
+  #message {
+    flex: 1;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .muted {
+    font-size: 10px;
+  }

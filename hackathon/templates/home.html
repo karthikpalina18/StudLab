@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     * {
+            margin:0;
+            padding:0;
+            color:#424242;
+        }
+
+        body {
+            
+            background-color: #48CFCB;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            
+           
+        }
+        .container{
+          padding:20px;
+          background-color: #F5F5F5;
+          margin-top:10%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        /* .form-group {
+            margin-bottom: 20px;
+        } */
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%; /* Full width of the container */
+            max-width: 500px; /* Optional maximum width */
+            height: 40px; /* Height of the input field */
+            padding: 12px 20px; /* Padding inside the input field */
+            font-size: 16px; /* Font size of the text inside the input field */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .text-danger {
+            color: red;
+            margin-top: 5px;
+            padding: 0;
+            list-style-type: none;
+        }
+        .create-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            background-color: #48CFCB;
+            transition: background-color 0.3s;
+            width: 50%;
+        }
+        .create-btn:hover {
+            background-color: #229799;
+        }
+        .create-btn-secondary {
+            background-color: #666;
+        }
+        .create-btn-secondary:hover {
+            background-color: #888;
+        }
+        .join-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            background-color: greenyellow;
+            transition: background-color 0.3s;
+
+            
+        }
+        .join-btn:hover {
+            background-color: #229799;
+        }
+        .join-btn-secondary {
+            background-color: #666;
+        }
+        .join-btn-secondary:hover {
+            background-color: #888;
+        }
+        .label{
+          width:100%;
+          text-align: center;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+      {% extends 'base.html' %} {% block content %}
+    <form method="post" class="buttons">
+      <img src="https://i.postimg.cc/1zG2RjQ0/0607cb3a-fd39-4167-89dc-f37a33078669-removebg-preview-1.png" width="400"/>
+      <h3 style="color:#229799;">Enter The Chat Room </h3>
+      <br>
+      <div class="form-group">
+        <label style="color: #229799;">Name:</label>
+        <input
+          type="text"
+          placeholder="Enter Your Name!"
+          name="name"
+          value="{{name}}"
+        />
+
+      </div>
+      <div class="form-group">
+        <br>
+        <label style="color: #229799;" >sem:</label>
+        <div class="label">
+        <input type="text" placeholder="Enter division" name="div" value="{{div}}" width="40px"/>
+        </div>
+        <button type="submit" name="join" class="join-btn">Join a Room</button>
+      </div>
+      <br>
+      <button type="submit" name="create" class="create-btn">Create a Room</button>
+      {% if error %}
+      <ul>
+        <li>{{error}}</li>
+      </ul>
+      {% endif %}
+    </form>
+    {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload/Download</title>
+    <style>
+        body {
+
+            background-color: teal;
+            text-align: center;
+            margin-top: 70px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+            align-items: center;
+            background-color: #424242;
+            height: 400px;
+            width: 400px;
+            border: 2px solid #333; /* Added border styling */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            margin: auto; /* Center horizontally */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+        .container h2 {
+            color: white;
+
+        }
+        .border {
+            text-align:center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between buttons */
+        }
+        .button {
+            display: inline-block;
+            width: 100px;
+            height: 40px; /* Adjusted height for better button visibility */
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background-color: #229799; /* Button color */
+            border-radius: 10px;
+            text-decoration: none;
+            line-height: 40px; /* Vertically center text */
+            font-size: 16px; /* Adjusted font size */
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #1a8c8d;
+        }
+        .button:active {
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select your option</h2>
+        <div class="border">
+            <a href="/posts" class="button">Guidance</a>
+            <a href="#" class="button">videos</a>
+            <a href="#" class="button">Roadmap</a>
+        </div>
+    </div>
+</body>
+</html>
